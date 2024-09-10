@@ -75,10 +75,10 @@ public class NGApplicationSimulation extends Simulation {
     {
         setUp(
                 callCreateAssociationForIssue.injectOpen(
-                        constantUsersPerSec(300).during(Duration.ofMinutes(5))
+                        constantUsersPerSec(1000).during(Duration.ofMinutes(5))
                 ).protocols(httpProtocol),
                 callFetchAssociationsForIssue.injectOpen(
-                        constantUsersPerSec(300).during(Duration.ofMinutes(5))
+                        constantUsersPerSec(1000).during(Duration.ofMinutes(5))
                 ).protocols(httpProtocol)
         );
     }
